@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="false" CodeBehind="HomeView.aspx.cs" Inherits="FubuMVC.Bottles.Example.HomeView" %>
+<%@ Import Namespace="HelloBottle" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
@@ -11,9 +12,10 @@
     <div>
 		<h1><%= Model.Text %></h1>
 		
-		<p><a href="hello">See the hello world page</a></p>
+		<p><a href="<%= Urls.UrlFor(new HelloInputModel()) %>">See the hello world page</a></p>
 
-		<p><a href="hello?Language=Spanish">See the hello world page in Spanish</a></p>
+		<p><a href="<%= Urls.UrlFor(new HelloInputModel(){Language = "Spanish"}) %>">See the hello world page in Spanish</a></p>
+		
     </div>
     </form>
 </body>
