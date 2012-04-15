@@ -16,6 +16,11 @@ namespace HelloBottle
 				return new HelloViewModel {Hello = "Hola, mundo!"};
 			}
 
+			if(input.Language == "Czech")
+			{
+				return new HelloViewModel { Hello = "Ahoj světe!" };
+			}
+
 			return new HelloViewModel {Hello = "Hello, world!"};
 		}
 	}
@@ -29,21 +34,5 @@ namespace HelloBottle
 	{
 		[QueryString]
 		public string Language { get; set; }
-	}
-
-	public class Registry : FubuPackageRegistry
-	{
-		public Registry()
-		{
-			Actions.IncludeTypes(x => x.Name.EndsWith("Handler"));
-
-			Routes
-				.IgnoreControllerNamespaceEntirely();
-
-			Import<WebFormsEngine>();
-
-			Views
-				.TryToAttachWithDefaultConventions();
-		}
 	}
 }

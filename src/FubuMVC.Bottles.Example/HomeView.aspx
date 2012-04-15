@@ -5,11 +5,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div>
-		<h1><%= Model.Text %></h1>
+		<h2>This is an example project to demonstrate Bottles</h2>
 		
-		<p><a href="<%= Urls.UrlFor(new HelloInputModel()) %>">See the hello world page</a></p>
-
-		<p><a href="<%= Urls.UrlFor(new HelloInputModel(){Language = "Spanish"}) %>">See the hello world page in Spanish</a></p>
+		<p><a href="<%= Urls.UrlFor(new HelloInputModel()) %>">Check out the 'Hello, World' bottle</a></p>
 		
     </div>
 </asp:Content>
