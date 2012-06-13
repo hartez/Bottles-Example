@@ -8,5 +8,7 @@
 		
 		<p><a href="/hello">Check out the 'Hello, World' bottle</a></p>
 		
+		<p><a href="/encryption">Check out the 'encryption' bottle</a></p>
+
     </div>
 </asp:Content>
