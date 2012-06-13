@@ -29,4 +29,10 @@
 	
 	<h1>IV:</h1>
 	<p><%=Model.IV %></p>
+	
+	<p>This is an example of replacing functionality in the parent application with a Bottle. The parent application has a default implementation using ROT-13; this bottle replaces that with a more complex AES encryption scheme.</p>
+	
+	<p>When this Bottle is enabled, the registry (see Registry.cs) adds the encryption handler route and views defined in this Bottle to the application. It also extends the parent application's registry with a policy which removes the default encryption routes and views (see RegistryExtension.cs). To turn this module off and see the default encryption module in the parent application, just change the 'IgnoreThisBottle' value in Registry.cs to 'true', then rebuild the solution. (You may also have to force the application pool to recycle by modifying the web.config.)</p>
+	
+	<p><a class="back" href="/">Back to the home page</a></p>
 </asp:Content>
